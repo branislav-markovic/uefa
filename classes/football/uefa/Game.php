@@ -29,6 +29,12 @@ class Game
         $home = mt_rand(0, 5);
         $away = mt_rand(0, 5);
 
+        $playerPositions = ["D", "M", "S"];
+        shuffle($playerPositions);
+        $setPosition = $playerPositions[0];
+        $players = $this->team1->getPlayers();
+        $randomPlayer = $players[$setPosition][mt_rand(0, count($players[$setPosition]) - 1)]->setInjury(true);
+
         return ($this->result = $home . " : " . $away);
     }
 

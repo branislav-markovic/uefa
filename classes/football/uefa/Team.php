@@ -27,6 +27,15 @@ class Team
     }
 
     /**
+     * Get all players
+     * @return string
+     */
+    public function getPlayers()
+    {
+        return $this->players;
+    }
+
+    /**
      * Set complete team - 22 players
      * 2 goalies, 6 defenders, 10 midfielders and 4 strikers
      * @param array $players
@@ -146,6 +155,20 @@ class Team
 
         usort($players, function($a, $b) use ($method) {
             return strcmp($b->{$method}(), $a->{$method}());
+        });
+
+        return $this->filterInjury($players);
+    }
+
+    /**
+     * Remove injured players from array
+     * @param array $players
+     * @return array
+     */
+    private function filterInjury($players)
+    {
+        $players = array_filter($players, function($player) {
+            return $player->getInjury() === false;
         });
 
         return $players;

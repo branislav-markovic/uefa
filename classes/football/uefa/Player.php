@@ -7,6 +7,7 @@ class Player
     private $position;
     private $quality;
     private $speed;
+    private $injury;
 
     /**
      * @param string $position
@@ -18,6 +19,7 @@ class Player
         $this->position = $position;
         $this->quality = $quality;
         $this->speed = $speed;
+        $this->injury = false;
     }
 
     /**
@@ -45,6 +47,22 @@ class Player
     public function getSpeed()
     {
         return $this->speed;
+    }
+
+    /**
+     * @return bool $injury
+     */
+    public function getInjury()
+    {
+        return $this->injury;
+    }
+
+    /**
+     * @param bool $injury
+     */
+    public function setInjury($injury)
+    {
+        $this->injury = $injury;
     }
 
     /**
