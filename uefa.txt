@@ -1,0 +1,39 @@
+UEFA League group
+
+You are a Soccer Team coach. Each of your players have 3 properties: position, quality and speed. Your team consist of 22 players in total: 2 goalies, 6 defenders, 10 midfielders and 4 strikers. 
+
+Assemble a formation of 11 starting players, containing goalie, defenders, midfielders and strikers according to your tactic, for each of the following games in UEFA league group:
+
+Game 1: You are playing against stronger opponent, so you need to concentrate on defence. You should choose 5 best defenders, 4 best midfielders and the fastest striker for counter attacks.
+
+Game 2: Second opponent seams equal to yours team quality. Build a regular, 4-4-2 formation of best players.
+
+Game 3: The weakest opponent and we need 3 points to qualify into the finals. Lets attack! Attacking formation is 3-4-3. Focus on players quality as counter attacks are not important in this game.
+
+After every game, one randomly selected player is injured and he can not be used any more.
+
+
+
+Desing and implement a system that is able to create a Team, add Players into the Team, build requested Formations and simulate a Match in UEFA league group stage.
+
+
+Actions(simulate front-end)
+- create a Team
+- add Players into the Team
+- build requested Formations
+- simulate a Match in UEFA league group stage
+
+
+Player(entity)
++ position
++ quality
++ speed
+
+Team: 22 players
+* 2 goalies
+* 6 defenders
+* 10 midfielders
+* 4 strikers
+
+Notes:
+- After every game, one randomly selected player is injured 
